@@ -1,5 +1,0 @@
-#!/bin/bash
-
-date=$(date +"%a %H:%M, %d %b %Y")
-
-echo $date
