@@ -2,21 +2,19 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
-//	{" ", 	"~/.config/suckless/scripts/pacupdate",		3600,	10},
+	{" ", 	"~/.config/suckless/scripts/pacupdate",		3600,	10},
 
 	{"", 	"~/.config/suckless/scripts/battery",		30,		0},
 
 	{"", 	"~/.config/suckless/scripts/brightness",	1,		0},
 
-//	{" ", 	"~/.config/suckless/scripts/weather",		3600,	0},
+	{" ", 	"~/.config/suckless/scripts/weather",		3600,	0},
 
 	{" ", 	"~/.config/suckless/scripts/volume",		1,		0},
 
 	{" ", 	"~/.config/suckless/scripts/ram",			5,		0},
 	
-//	{" ", 	"~/.config/suckless/scripts/cpu",			5,		0},
-
-	{"", 	"~/.config/suckless/scripts/disk",		    3600,	0},
+	{" ", 	"~/.config/suckless/scripts/cpu",			5,		0},
 
     {" ", 	"~/.config/suckless/scripts/upt",		    1,      0},
 

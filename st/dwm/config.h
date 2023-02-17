@@ -6,8 +6,8 @@ static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=12" };
+static const char dmenufont[]       = "monospace:size=12";
 static char normbgcolor[]           = "#282828";
 static char normbordercolor[]       = "#504945";
 static char normfgcolor[]           = "#ebdbb2";
@@ -21,9 +21,13 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "一", "二", "三", "四", "五" };
+static const char *tags[] = { "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
+	/* xprop(1):
+	 *	WM_CLASS(STRING) = instance, class
+	 *	WM_NAME(STRING) = title
+	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 };
@@ -59,10 +63,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "librewolf", NULL };
 static const char *bluetoothcmd[]  = { "rofi-bluetooth", NULL };
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *volupcmd[]  = { "pactl", "set-sink-volume", "0", "+2%", NULL };
-static const char *voldowncmd[]  = { "pactl", "set-sink-volume", "0", "-2%", NULL };
-static const char *brupcmd[] = { "brightnessctl", "s", "2+", NULL };
-static const char *brdowncmd[] = { "brightnessctl", "s", "2-", NULL };
+static const char *volupcmd[]  = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *voldowncmd[]  = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *brupcmd[] = { "brightnessctl", "s", "1%+", NULL };
+static const char *brdowncmd[] = { "brightnessctl", "s", "1%-", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */

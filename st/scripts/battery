@@ -1,0 +1,29 @@
+#!/bin/bash
+
+bat_charging=$( acpi -b | grep -c "Discharging")
+bat_level=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+
+
+if [ $bat_level -ge 90 ]
+then
+    status="  $bat_level%"
+elif [ $bat_level -ge 75 ]
+then
+     status="  $bat_level%"
+elif [ $bat_level -ge 50 ]
+then
+     status="  $bat_level%"
+elif [ $bat_level -ge 20 ]
+then
+     status="  $bat_level%"
+elif [ $bat_level -ge 5 ]
+then
+     status="  $bat_level%"
+fi
+
+if [ $bat_charging -eq 0 ]
+then
+    status=" $status"
+fi
+
+echo $status

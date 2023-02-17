@@ -1,0 +1,9 @@
+#!/bin/bash
+
+bright=$(brightnessctl | grep brightness | awk '{print $4}' | sed 's|[(),]||g')
+screen=$(xrandr | grep -c "HDMI")
+
+if [ $screen -eq 1 ]
+then
+    echo " $bright"
+fi
